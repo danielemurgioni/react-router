@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+}
+
+.products-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.product {
+    width: 50%;
+    margin: 0 auto;
+}

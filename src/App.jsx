@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+/*layout*/
+import DefaultLayout from './layout/DefaultLayout'
+
 /*pages*/
 import Homepage from './pages/Homepage'
 import Products from './pages/Products'
@@ -12,9 +15,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/about-us" element={<AboutUs />} />
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/about-us" element={<AboutUs />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

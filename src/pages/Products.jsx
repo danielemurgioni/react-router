@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
@@ -19,9 +18,6 @@ const Products = () => {
 
     return (
         <>
-            <div className="navbar-container">
-                <Navbar />
-            </div>
             <div className="products-container">
                 <h1>Products</h1>
                 {products.map((item) => (

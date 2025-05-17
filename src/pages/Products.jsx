@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const prodEndpoint = "https://fakestoreapi.com/products"
 
@@ -26,6 +27,7 @@ const Products = () => {
                         <img src={item.image} alt="" />
                         <p>{item.description}</p>
                         <p>Price: {item.price}£</p>
+                        <NavLink to={`/products/${item.id}`} className="link-prod-detail">View Details</NavLink>
                     </div>
                 ))}
             </div>
